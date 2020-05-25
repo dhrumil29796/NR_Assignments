@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<smooks-resource-list
+	xmlns="http://www.milyn.org/xsd/smooks-1.1.xsd"
+	xmlns:jb="http://www.milyn.org/xsd/smooks/javabean-1.2.xsd">
+
+
+	<jb:bean beanId="BookOrderInformation"
+		class="com.lti.freemarker.smooks.model.BookOrderInformation"
+		createOnElement="BookOrderInformation">
+		<jb:wiring property="contextInformation"
+			beanIdRef="ContextInformation" />
+		<jb:wiring property="bookOrderItems"
+			beanIdRef="BookOrderItems" />
+	</jb:bean>
+
+
+
+	<jb:bean beanId="BookOrderItems" class="java.util.ArrayList"
+		createOnElement="BookOrderInformation">
+		<jb:wiring beanIdRef="Book" />
+	</jb:bean>
+
+	<jb:bean beanId="ContextInformation"
+		class="com.lti.freemarker.smooks.model.ContextInformation"
+		createOnElement="ContextInformation">
+		<jb:value property="sessionId"
+			data="ContextInformation/SessionId"></jb:value>
+		<jb:value property="bookingMode"
+			data="ContextInformation/BookingMode"></jb:value>
+		<jb:value property="country"
+			data="ContextInformation/Country"></jb:value>
+		<jb:value property="state" data="ContextInformation/State"></jb:value>
+		<jb:value property="city" data="ContextInformation/City"></jb:value>
+	</jb:bean>
+
+
+	<jb:bean beanId="Book"
+		class="com.lti.freemarker.smooks.model.Book" createOnElement="Book">
+		<jb:value property="bookName" data="Book/Name" />
+		<jb:value property="bookPrice" data="Book/Price" />
+		<jb:value property="authorName" data="Book/Author" />
+		<jb:value property="publisherName" data="Book/Publisher" />
+		<jb:value property="orderBookingDate"
+			data="Book/OrderBookingDate" decoder="Date">
+			<jb:decodeParam name="format">yyyy-MM-dd</jb:decodeParam>
+		</jb:value>
+		<jb:value property="bookOrderId" data="Book/BookOrderId" />
+		<jb:value property="deliveryDate" data="Book/DeliveryDate" />
+		<jb:value property="dispatchDate" data="Book/dispatchDate" />
+
+	</jb:bean>
+
+
+
+</smooks-resource-list>

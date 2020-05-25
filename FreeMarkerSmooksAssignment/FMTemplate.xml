@@ -1,0 +1,32 @@
+<BookOrderInformation>
+	<ContextInformation>
+		<SessionId>qwerfgh3432</SessionId>
+		<BookingMode>website</BookingMode>
+		<Country>India</Country>
+		<State>Maharashtra</State>
+		<City>Mumbai</City>
+	</ContextInformation>
+	<BookOrderList>
+		<Book>
+			<Name>Head First Design Pattern</Name>
+			<Price>800</Price>
+			<Author>Freeman and Freeman</Author>
+			<Publisher>Oreilly</Publisher>
+			<OrderBookingDate>2020-05-01</OrderBookingDate>
+		</Book>
+		<Book>
+			<Name>Head First Java</Name>
+			<Price>950</Price>
+			<Author>Freeman and Freeman</Author>
+			<Publisher>Oreilly</Publisher>
+			<OrderBookingDate>2020-05-01</OrderBookingDate>
+		</Book>
+		<Book>
+			<Name>Head First JSP and Servlets</Name>
+			<Price>920</Price>
+			<Author>Freeman and Freeman</Author>
+			<Publisher>Oreilly</Publisher>
+			<OrderBookingDate>2020-05-01</OrderBookingDate>
+		</Book>
+	</BookOrderList>
+</BookOrderInformation>
