@@ -23,9 +23,9 @@ Your order below:
 
 **Sample XML below.**
 
-<img src=""></a>
+<img src="https://github.com/dhrumil29796/NR_Assignments/blob/master/XMLsample1.PNG"></a>
 
 
 **Backend processes the data and returns with BookOrderId, DeliveryDate and DispatchDate. Response from Backend:**
 
-<img src=""></a>
+<img src="https://github.com/dhrumil29796/NR_Assignments/blob/master/XMLsample2.PNG"></a>
